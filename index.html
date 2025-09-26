@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Happy Birthday Website 2.0 | Aoudumber Bade" />
     <meta name="github" content="https://github.com/Aoudumber-Bade" />
-    <title>Abdul Samad Qurashi Birthday</title>
+    <title>Kiran's Birthday</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -27,6 +27,7 @@
 
   <body>
     <div id="wrapper">
+      <div id="confetti"></div>
       <div class="flag__birthday">
         <img src="./images/1.png" alt="" width="350" class="flag__left" />
         <img src="./images/1.png" alt="" width="350" class="flag__right" />
@@ -52,23 +53,14 @@
               <span style="--t: 6.4s">y</span>
             </h1>
             <p class="birthday">
-              <span style="--t: 5s">F</span>
-              <span style="--t: 5.2s">r</span>
-              <span style="--t: 5.4s">o</span>
-              <span style="--t: 5.6s">m</span>
-            </p>
-            <p class="birthday">
-              <span style="--t: 5s">R</span>
-              <span style="--t: 5.2s">E</span>
-              <span style="--t: 5.4s">Y</span>
-              <span style="--t: 5.6s">A</span>
-              <span style="--t: 5.4s">N</span>
-              <span style="--t: 5.6s">S</span>
-              <span style="--t: 5.8s">H</span>
-              <span style="--t: 6s">O</span>
-              <span style="--t: 6.2s">A</span>
-              <span style="--t: 6.4s">I</span>
-              <span style="--t: 6.6s">B</span>
+              <span style="--t: 5s">T</span>
+              <span style="--t: 5.2s">o</span>
+              <span style="--t: 5.4s"> </span>
+              <span style="--t: 5.6s">K</span>
+              <span style="--t: 5.8s">i</span>
+              <span style="--t: 6s">r</span>
+              <span style="--t: 6.2s">a</span>
+              <span style="--t: 6.4s">n</span>
             </p>
             <div class="hat">
               <img src="./images/hat.png" alt="" width="130" />
@@ -80,7 +72,7 @@
           <div class="btn">
             <button id="btn__letter">
               <div class="mail">
-                Click Here Abdul Samad Qurashi
+                Open Birthday Letter for Kiran
                 <i class="fa-regular fa-envelope"></i>
               </div>
             </button>
@@ -89,11 +81,11 @@
         <div class="right">
           <div class="box__account">
             <div class="image">
-              <img src="./images/unnamed.png" alt="" />
+              <img id="profileImage" src="https://namewishes.com/images/styles/happy-birthday-girls-cake-with-name-and-photo-edit-online-free_141f.jpg" alt="Kiran profile" />
             </div>
             <div class="name">
               <i class="fa-solid fa-heart"></i>
-              <span>Dear Abdul Samad Qurashi</span>
+              <span>Dear Kiran</span>
               <i class="fa-solid fa-heart"></i>
             </div>
             <div class="balloon_one">
@@ -146,39 +138,39 @@
         <img src="./images/smiley_icon.png" alt="" width="100" />
       </div>
 
+      <button id="audioToggle" aria-label="Toggle birthday music">
+        <i class="fa-solid fa-music"></i>
+        <span>Play Music</span>
+      </button>
+      <audio id="bgm" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Happy_Birthday_to_You_piano.ogg" preload="auto" loop autoplay></audio>
+
       <div class="boxMail">
         <i class="fa-solid fa-xmark"></i>
         <div class="boxMail-container">
           <div class="card1">
             <div class="userImg">
-              <img src="images/unnamed.png" alt="" />
+              <img id="modalUserImg" src="https://namewishes.com/images/styles/happy-birthday-girls-cake-with-name-and-photo-edit-online-free_141f.jpg" alt="Kiran" />
             </div>
             <h4 class="username">
-              To: Abdul Samad Qurashi 💖<span class="underline"></span>
+              To: Kiran 💖<span class="underline"></span>
             </h4>
 
             <h3>Happy Birthday</h3>
-            <p>From Reyan Shoaib</p>
+            <p>From your office Brother 💐</p>
             <div class="imageCute">
-              <img src="cute1.png" alt="" />
+              <img src="images/love.png" alt="love" />
             </div>
           </div>
           <div class="card2">
             <div class="card2-content">
-              <h3>To You!</h3>
+              <h3>To Kiran!</h3>
               <h2>
-                Happy Birthday 🥳🎂🥳 Chanda! When you first came into my life,
-                I wasn’t that attached to you, but slowly you became really
-                close to my heart. Now you’re more like my younger sibling to
-                me. I wish I could take away some of the pain you’re carrying
-                alone. Remember, you can always talk to me whenever you feel
-                like, especially about the things you can’t share with others.
-                This year, may all your dreams come true. Don’t be sad, okay?
-                Stay happy and keep smiling 😌.
+                Happy Birthday, Kiran! 🥳🎂
+                You light up our office with your kindness, calm strength, and that smile that makes long days feel lighter. Wishing you a year full of growth, good health, and moments that make your heart happy. Keep shining the way you do — we’re lucky to have you. 💖
               </h2>
 
               <div class="imageCute2">
-                <img src="cute2.png" alt="" />
+                <img src="images/heart.png" alt="heart" />
               </div>
             </div>
           </div>
@@ -187,10 +179,18 @@
     </div>
   </body>
   <script>
-    let datetxt = "21 September 2025";
+    // Personalize date to tomorrow
+    (function(){
+      const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      const d = new Date();
+      d.setDate(d.getDate() + 1);
+      window.KIRAN_DATE = `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+    })();
+
+    let datetxt = window.KIRAN_DATE;
     let datatxtletter =
-      "My Brother. You are very special . I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
-    let titleLetter = "To you";
+      "Dear Kiran, you make work feel warmer and life feel kinder. May your new year be filled with peace, success, and the little joys that last. Happy Birthday! 💐";
+    let titleLetter = "To Kiran";
     let charArrDate = datetxt.split("");
     let charArrDateLetter = datatxtletter.split("");
     let charArrTitle = titleLetter.split("");
@@ -214,64 +214,14 @@
           clearInterval(timeDatetxt);
         }
       }, 100);
-    }, 12000);
+    }, 3000);
 
     var intervalContent;
     var intervalTitle;
     $("#btn__letter").on("click", function () {
-      $(".box__letter").slideDown();
-      setTimeout(function () {
-        $(".letter__border").slideDown();
-      }, 1000);
-      setTimeout(function () {
-        intervalTitle = setInterval(function () {
-          if (currentIndexTitle < charArrTitle.length) {
-            document.querySelector(".title__letter").textContent +=
-              charArrTitle[currentIndexTitle];
-            let i = document.createElement("i");
-            i.className = "fa-solid fa-heart";
-            document.querySelector(".title__letter").appendChild(i);
-            currentIndexTitle++;
-          } else {
-            clearInterval(intervalTitle);
-          }
-        }, 100);
-      }, 2000);
-      setTimeout(function () {
-        document.querySelector("#heart__letter").classList.add("animationOp");
-        document.querySelector(".love__img").classList.add("animationOp");
-        document.querySelector("#mewmew").classList.add("animationOp");
-      }, 2800);
-      setTimeout(function () {
-        document.querySelectorAll(".heart").forEach((item) => {
-          item.classList.add("animation");
-        });
-      }, 3500);
-      setTimeout(function () {
-        intervalContent = setInterval(function () {
-          if (currentIndexLetter < charArrDateLetter.length) {
-            text__letter.textContent += charArrDateLetter[currentIndexLetter];
-            currentIndexLetter++;
-          } else {
-            clearInterval(intervalContent);
-          }
-        }, 50);
-      }, 6000);
-    });
-    $(".close").on("click", function () {
-      clearInterval(intervalContent);
-      document.querySelector(".title__letter").textContent = "";
-      text__letter.textContent = "";
-      currentIndexLetter = 0;
-      currentIndexTitle = 0;
-      document.querySelector("#heart__letter").classList.remove("animationOp");
-      document.querySelector(".love__img").classList.remove("animationOp");
-      document.querySelector("#mewmew").classList.remove("animationOp");
-      document.querySelectorAll(".heart").forEach((item) => {
-        item.classList.remove("animation");
-      });
-      $(".box__letter").slideUp();
-      $(".letter__border").slideUp();
+      document.querySelector(".mail").click();
+      startConfettiBurst();
+      tryPlayMusic();
     });
 
     let mailBox = document.querySelector(".mail");
@@ -284,6 +234,67 @@
 
     close.addEventListener("click", function () {
       boxmail.classList.remove("active");
+    });
+
+    // Set chosen profile image consistently
+    (function(){
+      const url = 'https://namewishes.com/images/styles/happy-birthday-girls-cake-with-name-and-photo-edit-online-free_141f.jpg';
+      const profile = document.getElementById('profileImage');
+      const modalImg = document.getElementById('modalUserImg');
+      if (profile) profile.src = url;
+      if (modalImg) modalImg.src = url;
+    })();
+
+    // Confetti generator
+    const confettiContainer = document.getElementById('confetti');
+    function createConfettiPiece(index){
+      const el = document.createElement('span');
+      el.className = 'confetti';
+      const size = Math.floor(Math.random()*6)+6;
+      el.style.width = size + 'px';
+      el.style.height = size + 'px';
+      el.style.left = Math.random()*100 + '%';
+      const delay = Math.random()*3;
+      const duration = 5 + Math.random()*5;
+      el.style.animationDelay = delay + 's';
+      el.style.animationDuration = duration + 's';
+      const colors = ['#FF7882','#ffd166','#06d6a0','#118ab2','#ef476f','#8338ec'];
+      el.style.backgroundColor = colors[index % colors.length];
+      confettiContainer.appendChild(el);
+    }
+    function ensureConfettiBase(){
+      if (!confettiContainer.dataset.initialized){
+        for (let i=0;i<120;i++){ createConfettiPiece(i); }
+        confettiContainer.dataset.initialized = 'true';
+      }
+    }
+    function startConfettiBurst(){
+      ensureConfettiBase();
+      confettiContainer.classList.add('active');
+      setTimeout(()=> confettiContainer.classList.remove('active'), 7000);
+    }
+
+    // Background music toggle
+    const audio = document.getElementById('bgm');
+    const audioToggle = document.getElementById('audioToggle');
+    function updateAudioButton(){
+      const span = audioToggle.querySelector('span');
+      if (audio.paused){ span.textContent = 'Play Music'; audioToggle.classList.remove('playing'); }
+      else { span.textContent = 'Pause Music'; audioToggle.classList.add('playing'); }
+    }
+    function tryPlayMusic(){
+      if (audio.paused){ audio.play().then(updateAudioButton).catch(()=>{}); }
+    }
+    audioToggle.addEventListener('click', function(){
+      if (audio.paused){ audio.play().then(updateAudioButton).catch(()=>{}); }
+      else { audio.pause(); updateAudioButton(); }
+    });
+    // Pulse the CTA button subtly
+    document.getElementById('btn__letter').classList.add('btn-pulse');
+    // Attempt to auto-play on load and sync toggle state
+    window.addEventListener('DOMContentLoaded', function(){
+      tryPlayMusic();
+      updateAudioButton();
     });
   </script>
 </html>
